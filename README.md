@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 
 Configuration clés API
-Dans le fichier .env insérer vos clés personelles obtenues sur les différents sites : https://www.weatherapi.com/ et https://www.pexels.com/login/?redirect_to=%2Fapi%2Fkey%2F
+Dans le fichier .env insérer vos clés personelles obtenues sur les différents sites : https://www.weatherapi.com/ et si déjà compte -> https://www.pexels.com/login/?redirect_to=%2Fapi%2Fkey%2F sinon -> https://www.pexels.com/join-consumer/ pour ensuite revenir sur l'autre lien pexel pour obtenir votre clé.
 
 Lancer l'application
 python api_weather.py
