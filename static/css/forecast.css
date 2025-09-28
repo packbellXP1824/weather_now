@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Lexend', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/search_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body.sunny{
+    background-image: url("../img/wcd/bg-clear/1000.jpg");
+}
+body.cloudy{
+    background-image: url("../img/wcd/bg-cloudy/1006&1009.jpg");
+}
+body.partly-cloudy{
+    background-image: url("../img/wcd/bg-partly-cloudy/1003.jpg");
+}
+body.fog{
+    background-image: url("../img/wcd/bg-fog/1030&1135&1147.jpg");
+}
+body.ice{
+    background-image: url("../img/wcd/bg-ice/1237&1261&1264.jpg");
+}
+body.rain{
+    background-image: url("../img/wcd/bg-rain/1063&1150&1153&1168&1171&1180&1183&1186&1189&1192&1195&1198&1201&1240&1243&1246.jpg");
+}
+body.sleet{
+    background-image: url("../img/wcd/bg-sleet/1069&1072&1204&1207&1249&1252.jpg");
+}
+body.snow{
+    background-image: url("../img/wcd/bg-snow/1066&1114&1117&1210&1213&1216&1219&1222&1225&1255&1258.jpg");
+}
+body.thunder{
+    background-image: url("../img/wcd/bg-thunder/1087&1273&1276&1279&1282.jpg");
+}
+body.thunder .title{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 45px;
+    color: whitesmoke;
+    opacity: 92%;
+    font-family: 'Lexend', sans-serif;
+    margin-bottom: -15px;
+    margin-top: 10px;
+}
+.title{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 45px;
+    color: black;
+    font-family: 'Lexend', sans-serif;
+    margin-top: 10px;
+}
+.wrapper {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px; 
+}
+.container {
+  position: relative;
+  width: 410px;
+  background-color: rgba(152, 221, 255, 0.975);
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 1;
+  font-size: 15px;
+  align-items: center;
+}
+.container2 {
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 25px;
+  height: 100%;
+  background-color: rgba(117, 183, 252, 0.7);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 0;
+}
+.air-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+.btn {
+  display: flex;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgba(117, 183, 252, 0.9);
+  color: whitesmoke;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 12px;
+  max-width: 200px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.parent_btn{
+    justify-content: center;
+    display: flex;
+}
+.parent-images{
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 12%;
+    left: 5%;   
+}
+.images {
+    display: flex;        
+    align-items: center;
+    gap: 15px;    
+    flex-direction: column;        
+}
+
+.images img{
+    display: flex;
+    margin: 0;             
+    width: 51%;             
+    height: auto;              
+}
+
+body.thunder .images-title{
+    color: whitesmoke
+}
+body.rain .images-title{
+    color: whitesmoke
+}
+.global-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0px;
+}

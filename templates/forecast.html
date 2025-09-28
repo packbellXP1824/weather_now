@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weathernow</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/forecast.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=globe_location_pin" />
+</head>
+<body class="
+    {% if code == 1000 %}
+        sunny
+    {% elif code in [1006,1009] %}
+        cloudy
+    {% elif code == 1003 %}
+        partly-cloudy
+    {% elif code in [1030,1135,1147] %}
+        fog
+    {% elif code in [1237,1261,1264] %}
+        ice
+    {% elif code in [1063,1150,1153,1168,1171,1180,1183,1186,1189,1192,1195,1198,1201,1240,1243,1246] %}
+        rain
+    {% elif code in [1069,1072,1204,1207,1249,1252] %}
+        sleet
+    {% elif code in [1066,1114,1117,1210,1213,1216,1219,1222,1225,1255,1258] %}
+        snow  
+    {% elif code in [1087,1273,1276,1279,1282] %}
+        thunder
+    {% else %}
+        default           
+    {% endif %}">
+    <div class="parent-images">
+        <div class="images-title">
+                <h1>{{city | upper}}</h1>
+            </div>
+        <div class="images">
+            {% for url in images %}
+                <img src="{{ url }}" alt="Image de {{ city }}" width="70%" height="70%">
+            {% endfor %}
+        </div>
+    </div>
+    <h1 class="title">WEATHERNOW</h1>
+
+    <br><span style="text-transform:uppercase">
+    <form action="/forecast/<city>" method="GET">
+        <div class="global-container">
+            <div class="wrapper">
+                <div class="container">
+                    <div class="infos">
+                        <h2>{{city}} : </h3>
+                        <h3>Region : {{ region_name }}</h3>
+                        <h3>Country : {{ country_name }}</h3>
+                        <h3>Timezone : {{ tz_id }}</h3>
+                        <h3>Localtime : {{ localtime }}</h3>
+                    </div>
+
+                    <div><img class="icon" src="https:{{ icon }}" alt="{{ text }}"></div>
+                    <div class="data"><h2>Meteo Data : </h3></div>
+                    <div class="weather"><h3>{{text}} | CLOUD : {{cloud}}</h3></div>
+                    <div class="temp">
+                    <h3>ACTUAL TEMP : {{ temp_c }} °C / {{temp_f}} °F</h3>
+                    <h3>FEELSLIKE : {{ feelslike_c }} °C / {{feelslike_f}} °F</h3>
+                    <h3>WINDCHILL : {{ windchill_c }} °C / {{windchill_f}} °F</h3></div>
+                    <div class="humidity"><h3>HUMIDITY : {{humidity}}</h3></div>
+                    <div class="wind"><h3>WIND SPEED : {{ wind_kph }} kph / {{wind_mph}} mph / {{wind_kt}} kt</h3></div>
+                    <div class="wind_dir"><h3>WIND COMING FROM : {{wind_dir}}</h3></div>
+                    <div class="pressure"><h3>PRESSURE : {{ pressure_mb }} hPa / {{pressure_in}} inHg</h3></div>
+                    <div class="precip"><h3>PRECIP : {{ precip_mm }} mm / {{precip_in}} in</h3></div>                   
+                </div>
+                <div class="container2">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="parent_btn">
+        <h3><a href="{{ url_for('search') }}" class="btn">Try Another City ?</a></h3>
+    </div>
+    <form>
+        <div class='air-logo'>
+            <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0">
+            </a>
+        </div>
+    </form>
+</body>
+</html>

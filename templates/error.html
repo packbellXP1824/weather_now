@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 400</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/error.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=globe_location_pin" />
+</head>
+<body> 
+    <h1 class="title">WEATHERNOW</h1>
+    <h1 class="whoops"><center>400</center></h1>
+    <h2 class="sent1"><center>We couldn't find this city.</center></h2>
+    <h2 class="sent2"><center>Please check the spelling and try again 🙂</center></h2>
+    <div class="parent_btn">
+        <h3><a href="{{ url_for('search') }}" class="btn">Try Another City ?</a></h3>
+    </div>
+    <form>
+        <div class='air-logo'>
+            <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0">
+            </a>
+        </div>
+    </form>
+</body>
+</html>

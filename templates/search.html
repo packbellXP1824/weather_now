@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/search.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=globe_location_pin" />
+</head>
+<body>
+    <h1 id="title">WEATHERNOW</h1>
+    <br>
+    <h2 id="sent">Weathernow the forecast at the moment</h2>
+    <form action="{{ url_for('forecast') }}" method="POST">
+        <div class="search">
+            <span class="search-icon material-symbols-outlined">globe_location_pin</span> 
+            <input class="search-input" type="search" name="city" placeholder="Enter a City" required>
+        </div>    
+    </form>
+    <form>
+        <div class='air-logo'>
+            <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0">
+            </a>
+        </div>
+    </form>
+</body>
+</html>

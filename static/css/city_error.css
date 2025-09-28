@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: 'Lexend', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:rgba(255, 168, 134, 0.549);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.whoops{
+    font-size: 150px;
+    font-weight: bold;
+    background-image: url("../img/search_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-top: 300px;
+    margin-bottom: 30px;
+}
+.sent1{
+    font-size: 30px;
+    margin-bottom: -30px;
+    color :rgb(255, 151, 24);
+}
+
+.air-logo{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+.parent_btn{
+    justify-content: center;
+    display: flex;
+}
+.btn {
+  display: flex;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgb(255, 180, 88);
+  color: whitesmoke;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  max-width: 200px;
+  justify-content: center;
+}
